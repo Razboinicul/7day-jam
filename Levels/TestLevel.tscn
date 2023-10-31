@@ -1,7 +1,58 @@
-[gd_scene load_steps=2 format=3 uid="uid://djw3afutsk775"]
+[gd_scene load_steps=4 format=3 uid="uid://djw3afutsk775"]
 
 [ext_resource type="PackedScene" uid="uid://wrf5pem5elve" path="res://Player/Player.tscn" id="1_bovdl"]
+[ext_resource type="PackedScene" uid="uid://17skxsm0evxo" path="res://Collectable/Coin.tscn" id="2_aaokv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r7s5g"]
 
 [node name="TestLevel" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_bovdl")]
+
+[node name="ProgressBar" type="ProgressBar" parent="Player"]
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
+texture_filter = 1
+material = SubResource("ShaderMaterial_r7s5g")
+offset_left = -198.0
+offset_top = -443.0
+offset_right = -50.0
+offset_bottom = -416.0
+step = 0.5
+
+[node name="Coins" type="Label" parent="Player"]
+offset_left = 166.0
+offset_top = -447.0
+offset_right = 206.0
+offset_bottom = -421.0
+text = "0/10"
+
+[node name="Coin" parent="." instance=ExtResource("2_aaokv")]
+position = Vector2(81, 171)
+
+[node name="Coin2" parent="." instance=ExtResource("2_aaokv")]
+position = Vector2(108, 67)
+
+[node name="Coin3" parent="." instance=ExtResource("2_aaokv")]
+position = Vector2(-17, 88)
+
+[node name="Coin4" parent="." instance=ExtResource("2_aaokv")]
+position = Vector2(144, -44)
+
+[node name="Coin5" parent="." instance=ExtResource("2_aaokv")]
+position = Vector2(102, 359)
+
+[node name="Coin6" parent="." instance=ExtResource("2_aaokv")]
+position = Vector2(382, 295)
+
+[node name="Coin7" parent="." instance=ExtResource("2_aaokv")]
+position = Vector2(311, 88)
+
+[node name="Coin8" parent="." instance=ExtResource("2_aaokv")]
+position = Vector2(276, 338)
+
+[node name="Coin9" parent="." instance=ExtResource("2_aaokv")]
+position = Vector2(585, 129)
+
+[node name="Coin10" parent="." instance=ExtResource("2_aaokv")]
+position = Vector2(427, 112)
