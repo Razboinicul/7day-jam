@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://wrf5pem5elve"]
+
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_nnpy4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yo3mk"]
+size = Vector2(30, 45)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_nnpy4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -22.5
+offset_right = 15.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yo3mk")
